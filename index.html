@@ -1,120 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Image Box Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neon Games Gallery</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-        body {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
+body{
+    background:#050510;
+    min-height:100vh;
+    padding:30px;
+    color:#fff;
+}
 
-        h1 {
-            text-align: center;
-            color: #ffffff;
-            margin-bottom: 40px;
-            font-size: 2.5rem;
-        }
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:2.5rem;
+    color:#00ffff;
+    text-shadow:0 0 10px #00ffff, 0 0 20px #00ffff;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
+.gallery{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:25px;
+}
 
-        .card {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            cursor: pointer;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-            transition: transform 0.4s ease;
-        }
+.card{
+    position:relative;
+    height:260px;
+    border-radius:15px;
+    overflow:hidden;
+    cursor:pointer;
+    border:2px solid transparent;
+    background:#000;
+    transition:0.4s;
+    box-shadow:
+        0 0 10px rgba(0,255,255,0.3),
+        0 0 20px rgba(255,0,255,0.2);
+}
 
-        .card:hover {
-            transform: translateY(-10px);
-        }
+.card:hover{
+    transform:translateY(-8px) scale(1.03);
+    border-color:#ff00ff;
+    box-shadow:
+        0 0 15px #00ffff,
+        0 0 30px #ff00ff,
+        0 0 60px rgba(255,0,255,0.8);
+}
 
-        .card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s ease;
-        }
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
 
-        .card:hover img {
-            transform: scale(1.1);
-        }
+.card:hover img{
+    transform:scale(1.1);
+}
 
-        .overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-            display: flex;
-            align-items: flex-end;
-            padding: 20px;
-        }
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    display:flex;
+    align-items:flex-end;
+    padding:15px;
+}
 
-        .overlay h2 {
-            color: #ffffff;
-            font-size: 1.4rem;
-        }
+.overlay h2{
+    font-size:1.2rem;
+    color:#00ffff;
+    text-shadow:0 0 8px #00ffff;
+}
 
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+@media(max-width:600px){
+    h1{
+        font-size:1.8rem;
+    }
+    .card{
+        height:220px;
+    }
+}
+</style>
 </head>
 <body>
 
-    <h1>Beautiful Responsive Gallery</h1>
+<h1>🔥 Neon Games Gallery 🔥</h1>
 
-    <div class="container">
+<div class="gallery">
 
-        <div class="card">
-            <img src="https://picsum.photos/500/500?random=1" alt="Image 1">
-            <div class="overlay">
-                <h2>Adventure World</h2>
-            </div>
-        </div>
+<!-- 30 Image Boxes -->
+<div class="card"><img src="https://picsum.photos/500/500?random=1"><div class="overlay"><h2>Game 1</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=2"><div class="overlay"><h2>Game 2</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=3"><div class="overlay"><h2>Game 3</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=4"><div class="overlay"><h2>Game 4</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=5"><div class="overlay"><h2>Game 5</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=6"><div class="overlay"><h2>Game 6</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=7"><div class="overlay"><h2>Game 7</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=8"><div class="overlay"><h2>Game 8</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=9"><div class="overlay"><h2>Game 9</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=10"><div class="overlay"><h2>Game 10</h2></div></div>
 
-        <div class="card">
-            <img src="https://picsum.photos/500/500?random=2" alt="Image 2">
-            <div class="overlay">
-                <h2>Racing Zone</h2>
-            </div>
-        </div>
+<div class="card"><img src="https://picsum.photos/500/500?random=11"><div class="overlay"><h2>Game 11</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=12"><div class="overlay"><h2>Game 12</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=13"><div class="overlay"><h2>Game 13</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=14"><div class="overlay"><h2>Game 14</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=15"><div class="overlay"><h2>Game 15</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=16"><div class="overlay"><h2>Game 16</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=17"><div class="overlay"><h2>Game 17</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=18"><div class="overlay"><h2>Game 18</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=19"><div class="overlay"><h2>Game 19</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=20"><div class="overlay"><h2>Game 20</h2></div></div>
 
-        <div class="card">
-            <img src="https://picsum.photos/500/500?random=3" alt="Image 3">
-            <div class="overlay">
-                <h2>Puzzle Games</h2>
-            </div>
-        </div>
+<div class="card"><img src="https://picsum.photos/500/500?random=21"><div class="overlay"><h2>Game 21</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=22"><div class="overlay"><h2>Game 22</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=23"><div class="overlay"><h2>Game 23</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=24"><div class="overlay"><h2>Game 24</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=25"><div class="overlay"><h2>Game 25</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=26"><div class="overlay"><h2>Game 26</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=27"><div class="overlay"><h2>Game 27</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=28"><div class="overlay"><h2>Game 28</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=29"><div class="overlay"><h2>Game 29</h2></div></div>
+<div class="card"><img src="https://picsum.photos/500/500?random=30"><div class="overlay"><h2>Game 30</h2></div></div>
 
-        <div class="card">
-            <img src="https://picsum.photos/500/500?random=4" alt="Image 4">
-            <div class="overlay">
-                <h2>Action Arena</h2>
-            </div>
-        </div>
-
-    </div>
+</div>
 
 </body>
 </html>
