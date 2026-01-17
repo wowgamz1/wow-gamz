@@ -1,1 +1,203 @@
-way 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> WOW GAMZ </title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#00D9FA;
+    color:#09ed65;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:20px;
+    font-size:2.4rem;
+    color:#ff9cff;
+    text-shadow:0 0 10px #ff9cff;
+}
+
+/* GAME GRID */
+.gallery{
+    display:grid;
+    gap:26px;
+    max-width:1600px;
+    margin:0 auto;
+    padding:20px;
+}
+
+/* MOBILE */
+@media (max-width:600px){
+    .gallery{grid-template-columns:repeat(3,1fr);}
+}
+
+/* TABLET */
+@media (min-width:601px) and (max-width:1024px){
+    .gallery{grid-template-columns:repeat(4,1fr);}
+}
+
+/* PC */
+@media (min-width:1025px){
+    .gallery{grid-template-columns:repeat(5,1fr);}
+}
+
+.card{
+    background:#0303fc;
+    border-radius:10px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(255,156,255,0.8);
+}
+
+.card img{
+    width:100%;
+    display:block;
+}
+
+.label{
+    padding:8px;
+    text-align:center;
+    background:rgba(0,0,0,0.5);
+    color:#cf03fc;
+    font-size:0.95rem;
+}
+
+/* FULLSCREEN IFRAME */
+#webview{
+    position:fixed;
+    inset:0;
+    background:#160021;
+    display:none;
+    z-index:9999;
+}
+
+#webview iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+/* EXIT BUTTON */
+#closeBtn{
+    position:absolute;
+    top:10px;
+    right:15px;
+    padding:8px 10px;
+    font-size:12px;
+    background:#00c3ff;
+    color:#000;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    z-index:10000;
+}
+</style>
+</head>
+
+<body>
+
+<header> WOW GAMZ </header>
+
+<div class="gallery">
+
+<!-- 30 GAME CARDS (UNCHANGED) -->
+<div class="card" data-game="https://g.igroutka.ru/games/164/7mJkjtiaHp8n2QP0/10/subway_surfers_paris_summer_games/"><img src="https://manual-magenta-4wuxmohltu.edgeone.app/7a35d4a468a820f1dc72b9ad22e9aeec.jpg"><div class="label">SUBWAY SURFERS</div></div>
+<div class="card" data-game="https://example.com/game6"><img src="https://picsum.photos/400/250?6"><div class="label">TEMPLE RUN</div></div>
+<div class="card" data-game="https://www.scary-teacher.com/wp-content/uploads/games/scary-teacher.html"><img src="https://m.media-amazon.com/images/M/MV5BNGRlMzFlYzctODVkMS00OTYzLTg0NzEtODE3OTRjZGIwNzQyXkEyXkFqcGc@._V1_.jpg"><div class="label">SCARY TEACHER</div></div>
+<div class="card" data-game="https://example.com/game4"><img src="https://picsum.photos/400/250?4"><div class="label"></div></div>
+<div class="card" data-game="https://example.com/game5"><img src="https://picsum.photos/400/250?5"><div class="label">Game 5</div></div>
+
+<div class="card" data-game="https://example.com/game6"><img src="https://picsum.photos/400/250?6"><div class="label">Game 6</div></div>
+<div class="card" data-game="https://example.com/game7"><img src="https://picsum.photos/400/250?7"><div class="label">Game 7</div></div>
+<div class="card" data-game="https://example.com/game8"><img src="https://picsum.photos/400/250?8"><div class="label">Game 8</div></div>
+<div class="card" data-game="https://example.com/game9"><img src="https://picsum.photos/400/250?9"><div class="label">Game 9</div></div>
+<div class="card" data-game="https://example.com/game10"><img src="https://picsum.photos/400/250?10"><div class="label">Game 10</div></div>
+
+<div class="card" data-game="https://example.com/game11"><img src="https://picsum.photos/400/250?11"><div class="label">Game 11</div></div>
+<div class="card" data-game="https://example.com/game12"><img src="https://picsum.photos/400/250?12"><div class="label">Game 12</div></div>
+<div class="card" data-game="https://example.com/game13"><img src="https://picsum.photos/400/250?13"><div class="label">Game 13</div></div>
+<div class="card" data-game="https://example.com/game14"><img src="https://picsum.photos/400/250?14"><div class="label">Game 14</div></div>
+<div class="card" data-game="https://example.com/game15"><img src="https://picsum.photos/400/250?15"><div class="label">Game 15</div></div>
+
+<div class="card" data-game="https://example.com/game16"><img src="https://picsum.photos/400/250?16"><div class="label">Game 16</div></div>
+<div class="card" data-game="https://example.com/game17"><img src="https://picsum.photos/400/250?17"><div class="label">Game 17</div></div>
+<div class="card" data-game="https://example.com/game18"><img src="https://picsum.photos/400/250?18"><div class="label">Game 18</div></div>
+<div class="card" data-game="https://example.com/game19"><img src="https://picsum.photos/400/250?19"><div class="label">Game 19</div></div>
+<div class="card" data-game="https://example.com/game20"><img src="https://picsum.photos/400/250?20"><div class="label">Game 20</div></div>
+
+<div class="card" data-game="https://example.com/game21"><img src="https://picsum.photos/400/250?21"><div class="label">Game 21</div></div>
+<div class="card" data-game="https://example.com/game22"><img src="https://picsum.photos/400/250?22"><div class="label">Game 22</div></div>
+<div class="card" data-game="https://example.com/game23"><img src="https://picsum.photos/400/250?23"><div class="label">Game 23</div></div>
+<div class="card" data-game="https://example.com/game24"><img src="https://picsum.photos/400/250?24"><div class="label">Game 24</div></div>
+<div class="card" data-game="https://example.com/game25"><img src="https://picsum.photos/400/250?25"><div class="label">Game 25</div></div>
+
+<div class="card" data-game="https://example.com/game26"><img src="https://picsum.photos/400/250?26"><div class="label">Game 26</div></div>
+<div class="card" data-game="https://example.com/game27"><img src="https://picsum.photos/400/250?27"><div class="label">Game 27</div></div>
+<div class="card" data-game="https://example.com/game28"><img src="https://picsum.photos/400/250?28"><div class="label">Game 28</div></div>
+<div class="card" data-game="https://example.com/game29"><img src="https://picsum.photos/400/250?29"><div class="label">Game 29</div></div>
+<div class="card" data-game="https://example.com/game30"><img src="https://picsum.photos/400/250?30"><div class="label">Game 30</div></div>
+
+</div>
+
+<!-- FULLSCREEN WEBVIEW -->
+<div id="webview">
+    <button id="closeBtn">✕ Exit</button>
+    <iframe id="gameFrame" allowfullscreen></iframe>
+</div>
+
+<!-- ✅ JAVASCRIPT ONLY (NO HTML TOUCHED) -->
+<script>
+const cards = document.querySelectorAll(".card");
+const webview = document.getElementById("webview");
+const frame = document.getElementById("gameFrame");
+const closeBtn = document.getElementById("closeBtn");
+
+function openGame(url){
+    frame.src = url;
+    webview.style.display = "block";
+    document.body.style.overflow = "hidden";
+    history.pushState({game:true},"");
+
+    if (webview.requestFullscreen) webview.requestFullscreen();
+}
+
+function closeGame(){
+    frame.src = "";
+    webview.style.display = "none";
+    document.body.style.overflow = "auto";
+    if (document.fullscreenElement) document.exitFullscreen();
+}
+
+cards.forEach(card=>{
+    card.addEventListener("click",()=>{
+        openGame(card.dataset.game);
+    });
+});
+
+closeBtn.addEventListener("click",()=>{
+    closeGame();
+    if(history.state && history.state.game) history.back();
+});
+
+window.addEventListener("popstate",()=>{
+    if(webview.style.display==="block") closeGame();
+});
+
+document.addEventListener("keydown",(e)=>{
+    if(e.key==="Escape" && webview.style.display==="block") closeGame();
+});
+</script>
+
+</body>
+</html>
